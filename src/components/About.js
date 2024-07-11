@@ -37,7 +37,7 @@ const About = () => {
           viewport={{ once:false, amount: 0.3 }}
           className='flex-1'>
           <h2 className='h2 text-accent'>About me</h2>
-          <h3 className='h3 mb-4'>A Frontend Developer based in Indonesia.</h3>
+          <h3 className='h3 mb-4'>A Frontend Developer from in Indonesia.</h3>
           <p className='mb-6'>
             Hi everyone! I'am Hafiz Haekal, a Frontend Developer. I'am a intermediate experienced and I hope with this I can always learning something new to be able to invent digital applications that can help many people in the future.
           </p>

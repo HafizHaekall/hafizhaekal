@@ -1,4 +1,6 @@
 import React from 'react';
+// page link
+import { Link } from 'react-router-dom';
 // motion
 import { motion } from 'framer-motion';
 // variants
@@ -6,9 +8,9 @@ import { fadeIn } from '../variants';
 // icons
 import { FaEye, FaGithub } from 'react-icons/fa';
 // img
-import img1 from '../assets/portofolio1.png';
-import img2 from '../assets/portofolio2.png';
-import img3 from '../assets/portofolio3.png';
+import img1 from '../assets/portofolio2.jpg';
+import img2 from '../assets/portofolio3.jpg';
+import img3 from '../assets/portofolio5.jpg';
 import iconLARAVEL from '../assets/skills/LARAVEL.svg';
 import iconTAILWIND from '../assets/skills/TAILWIND.svg';
 import iconVITE from '../assets/skills/VITE.svg';
@@ -24,19 +26,19 @@ const Work = () => {
             initial='hidden'
             whileInView={'show'}
             viewport={{ once:false, amount: 0.3 }}
-            className='flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0'>
+            className='flex-1 flex flex-col gap-y-16 mb-10 lg:mb-0'>
             {/* text */}
             <div>
               <h2 className='h2 leading-tight text-accent'>My Latest <br />Work</h2>
               <p className='max-w-sm mb-12 lg:mb-24'>I've created a few project while i was learing about frontend website development.</p>
-              <button className='btn btn-sm'>View all projects</button>
+              <Link to='/projects' onClick={() => { window.scrollTo(0, 0); }} className='btn btn-sm py-4'>View all projects</Link>
             </div>
             {/* images */}
             <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl'>
               {/* overlay */}
               <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
               {/* img */}
-              <img src={img1} alt='' className='group-hover:scale-125 transition-all duration-500' />
+              <img src={img2} alt='' className='group-hover:scale-125 transition-all duration-500' />
               {/* pretitle */}
               <div className='absolute -top-full left-6 lg:left-12 group-hover:top-12 lg:group-hover:top-16 transition-all duration-500 z-40'>
                 <span className='text-gradient'>Web Application</span>
@@ -72,7 +74,7 @@ const Work = () => {
               {/* overlay */}
               <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
               {/* img */}
-              <img src={img2} alt='' className='group-hover:scale-125 transition-all duration-500' />
+              <img src={img1} alt='' className='group-hover:scale-125 transition-all duration-500' />
               {/* pretitle */}
               <div className='absolute -top-full left-6 lg:left-12 group-hover:top-12 lg:group-hover:top-16 transition-all duration-500 z-40'>
                 <span className='text-gradient'>Web Application</span>

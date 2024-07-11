@@ -1,4 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ProjectsPage from './Projects';
+import Berhasil from './components/Berhasil';
 // components
 import Banner from './components/Banner';
 import Header from './components/Header';
@@ -11,17 +14,31 @@ import Contact from './components/Contact';
 
 const App = () => {
   return (
-    <div className='bg-site bg-no-repeat bg-cover overflow-hidden'>
-      <Header />
-      <Banner />
-      <Nav />
-      <About />
-      <Skills />
-      {/* <Services /> */}
-      <Work />
-      <Contact />
-      <div className='h-[10vh] lg:h-[25vh] xxl:h-[0]'></div>
-    </div>
+    <Router>
+      <div className='bg-site bg-no-repeat bg-cover overflow-hidden'>
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <div>
+                <Header />
+                <Nav />
+                <Banner />
+                <About />
+                <Skills />
+                {/* <Services /> */}
+                <Work />
+                <Contact />
+                <div className='h-[10vh] lg:h-[25vh] xxl:h-[0]'></div>
+              </div>
+            }
+          />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/berhasil" element={<Berhasil />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
